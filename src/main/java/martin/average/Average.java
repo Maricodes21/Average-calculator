@@ -12,11 +12,17 @@ import javax.swing.*;
 public class Average {
 
     public static void main(String[] args) {
-    String studName,studGrade;
+    String studName,studGrade,term;
     int engMark, afrMark, mathMark, geoMark, historyMark, catMark, loMark;
     
     studName = JOptionPane.showInputDialog("Please enter your students name: ");
     studGrade = JOptionPane.showInputDialog("Please enter your students grade: ");
+    
+    //Prompting the user to select the average they want to calculate 
+    String choice = JOptionPane.showInputDialog("What would you like to do" + "\n" + "1)Current Term Average" + "\n" + "2)Year Average");
+    term = JOptionPane.showInputDialog("Please enter the current term: ");
+    
+    if (choice.equals("1")){
     engMark = Integer.parseInt(JOptionPane.showInputDialog("Please enter your students English mark(%): "));
     afrMark = Integer.parseInt(JOptionPane.showInputDialog("Please enter your students Afrikaans mark(%): "));
     mathMark = Integer.parseInt(JOptionPane.showInputDialog("Please enter your students Math mark(%): "));
@@ -37,6 +43,20 @@ public class Average {
     
     double average = ((engMark + afrMark + mathMark + geoMark + historyMark + catMark + loMark) / 7);
     
-    System.out.println("Avr:\t" + average );
+    System.out.println("Term: " + term + " Average:" + average );
+    }else{
+    int term1,term2,term3,term4;
+    
+    
+    //Prompting the user to enter their average per term
+    term1 = Integer.parseInt(JOptionPane.showInputDialog("Please enter your Term 1 average: "));
+    term2 = Integer.parseInt(JOptionPane.showInputDialog("Please enter your Term 2 average: "));
+    term3 = Integer.parseInt(JOptionPane.showInputDialog("Please enter your Term 3 average: "));
+    term4 = Integer.parseInt(JOptionPane.showInputDialog("Please enter your Term 4 average: "));
+    
+    double Yearaverage= ((term1 +term2+term3+term4)/4);
+    
+    System.out.println("Year average" + Yearaverage );
+    }
     }
 }
