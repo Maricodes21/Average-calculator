@@ -1,0 +1,1 @@
+This version of the average calculator prompts the user to select if they want to calculate the term average or yearly average and based on their choice they'll be prompted to enter the appropriate marks and the program will either cslculate the term average or year average
